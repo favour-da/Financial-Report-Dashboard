@@ -1,1 +1,33 @@
+TotalRevenue = SUM(Finance[Revenue])
 
+TotalExpense = SUM(Finance[Expense])
+
+COGS = 
+CALCULATE(
+    SUM(Finance[Expense]),
+    Finance[Expense Subgroup] = "COGS"
+)
+
+Opex = 
+CALCULATE(
+    SUM(Finance[Expense]),
+    Finance[Expense Subgroup] = "Opex"
+)
+
+Int and Tax = 
+CALCULATE(
+    SUM(Finance[Expense]),
+    Finance[Expense Subgroup] = "Interest and Tax"
+)
+
+Gross Profit = [TotalRevenue] - [COGS]
+
+Gross Profit Margin = DIVIDE([Gross Profit], [TotalRevenue], 0)
+
+EBIT = [Gross Profit] - [Opex]
+
+EBIT Margin = DIVIDE([EBIT], [TotalRevenue], 0)
+
+Net Profit = [TotalRevenue] - [TotalExpense]
+
+Net Profit Margin = DIVIDE([Net Profit], [TotalRevenue], 0)
