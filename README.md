@@ -28,4 +28,6 @@ This dashboard used custom DAX measures covering core financial metrics, month-o
 - Sportswear showed strong Q1 sales at 1,351,500 but declined gradually across quarters
 
 ## Reference
-KPI definitions and formulas used in this project are documented in [docs/Finance_Analysis.pdf](docs/Finance_Analysis.pdf).
+KPI definitions and formulas used in this project are documented in [Finance_Analysis](docs/Finance_Analysis.pdf).
+
+The full interactive report is available as `FINANCE REPORT.pbix` in this repo — open it in Power BI Desktop to explore.
