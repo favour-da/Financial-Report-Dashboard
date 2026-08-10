@@ -122,62 +122,49 @@ MoMNP% = DIVIDE([MoMNP], [PrevMonthNP], 0)
 
 ## 3. Target / Budget Comparison Measures
 
-Target Revenue
+## Target Revenue
 The budgeted/target revenue figure used to compare against actual performance.
 
-TargetRevenue = SUM(Finance[Target Revenue])
+TargetRevenue = 6000000
 
-TargetExpense
+
+## TargetExpense
 The budgeted/target expense figure used to compare against actual performance.
 
-TargetExpense = SUM(Finance[Target Expense])
+TargetExpense = 4000000
 
-Target Month Revenue
-Target Month Revenue = 
+## Target Month Revenue
 Target revenue for the selected month, used to plot the monthly actual-vs-target comparison line.
 
----
+Target Month Revenue = 18000000/12
 
 ## 4. Conditional Formatting (Dynamic Color) Measures
+These measures return color values used to dynamically format KPI cards.
 
-These measures return hex/color values used to dynamically format KPI cards — green when performance is favorable, red when unfavorable.
+## Revbgcolor / RevValueColor
+Background and text color for the Revenue card.
 
-**Revbgcolor / RevValueColor**
-```dax
-Revbgcolor = 
-IF([MoMRev%] >= 0, "#D4EDDA", "#F8D7DA")
+Revbgcolor = IF([MoMRev]>0, "#CFF5DA", "#F5CFCF")
 
-RevValueColor = 
-IF([MoMRev%] >= 0, "#155724", "#721C24")
-```
-Background and text color for the Revenue card — green if revenue is up MoM, red if down.
+RevValueColor = IF([MoMRev]>0, "Green", "Red")
 
-**Expbgcolor / ExpValueColor**
-```dax
-Expbgcolor = 
-IF([MoMExp%] <= 0, "#D4EDDA", "#F8D7DA")
+## Expbgcolor / ExpValueColor
+Background and text color for the Expense card.
 
-ExpValueColor = 
-IF([MoMExp%] <= 0, "#155724", "#721C24")
-```
-Background and text color for the Expense card — green if expenses are down MoM (favorable), red if up.
+Expbgcolor = IF([MoMExp]>0, "#F5CFCF", "#CFF5DA")
 
-**GPbgcolor / GPValueColor**
-```dax
-GPbgcolor = 
-IF([MoMGP%] >= 0, "#D4EDDA", "#F8D7DA")
+ExpValueColor = IF([MoMExp]>0, "Red","Green")
 
-GPValueColor = 
-IF([MoMGP%] >= 0, "#155724", "#721C24")
-```
-Background and text color for the Gross Profit card — green if gross profit is up MoM, red if down.
+## GPbgcolor / GPValueColor
+Background and text color for the Gross Profit card.
 
-**NPbgcolor / NPValueColour**
-```dax
-NPbgcolor = 
-IF([MoMNP%] >= 0, "#D4EDDA", "#F8D7DA")
+GPbgcolor = IF([MoMGP]>0, "#CFF5DA", "#F5CFCF")
 
-NPValueColour = 
-IF([MoMNP%] >= 0, "#155724", "#721C24")
-```
-Background and text color for the Net Profit card — green if net profit is up MoM, red if down.
+GPValueColor = IF([MoMG]>0, "Green", "Red")
+
+## NPbgcolor / NPValueColour
+Background and text color for the Net Profit card.
+
+NPbgcolor = IF([MoMNP]>0, "#CFF5DA", "#F5CFCF")
+
+NPValueColour = IF([MoMNP]>0, "Green","Red")
