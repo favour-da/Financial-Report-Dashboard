@@ -14,10 +14,10 @@ This project tracks financial performance (Revenue, Expense, Gross Profit, Net P
 4. **Income / Expense Breakdown** – Full income statement and expense statement by quarter, business line, with narrative insights
 
 ## Dashboard Preview
-![Overview](Screenshot/01_Overview.png)
-![Expense Breakdown](Screenshot/02_Profit_Breakdown.png)
-![Income/Expense Breakdown](Screenshot/03_Expense_Breakdown.png)
-![Profit Breakdown](Screenshot/04_Income_Expense_Breakdown.png)
+![Overview](Finance/01_Overview.png)
+![Expense Breakdown](Finance/02_Profit_Breakdown.png)
+![Income/Expense Breakdown](Finance/03_Expense_Breakdown.png)
+![Profit Breakdown](Finance/04_Income_Expense_Breakdown.png)
 
 ## DAX Measures
 This dashboard used custom DAX measures covering core financial metrics, month-over-month growth, target/budget comparisons, and dynamic conditional formatting. Full documentation with code and explanations: [DAX Measures](docs/DAX_Measures.md)
